@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct tictactoeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GameView(
+                store: Store(initialState: TicTacToeFeature.State()) {
+                    TicTacToeFeature()
+                }
+            )
         }
     }
 }

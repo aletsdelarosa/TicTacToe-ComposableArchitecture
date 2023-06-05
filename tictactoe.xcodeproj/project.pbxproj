@@ -8,17 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		951473B22A2D492F00D281A1 /* tictactoeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951473B12A2D492F00D281A1 /* tictactoeApp.swift */; };
-		951473B42A2D492F00D281A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951473B32A2D492F00D281A1 /* ContentView.swift */; };
+		951473B42A2D492F00D281A1 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951473B32A2D492F00D281A1 /* GameView.swift */; };
 		951473B62A2D493000D281A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951473B52A2D493000D281A1 /* Assets.xcassets */; };
 		951473B92A2D493000D281A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951473B82A2D493000D281A1 /* Preview Assets.xcassets */; };
+		951473C12A2D496A00D281A1 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 951473C02A2D496A00D281A1 /* ComposableArchitecture */; };
+		951473C32A2D49D600D281A1 /* TicTacToeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951473C22A2D49D600D281A1 /* TicTacToeFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		951473AE2A2D492F00D281A1 /* tictactoe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tictactoe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		951473B12A2D492F00D281A1 /* tictactoeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tictactoeApp.swift; sourceTree = "<group>"; };
-		951473B32A2D492F00D281A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		951473B32A2D492F00D281A1 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		951473B52A2D493000D281A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		951473B82A2D493000D281A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		951473C22A2D49D600D281A1 /* TicTacToeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				951473C12A2D496A00D281A1 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +55,9 @@
 		951473B02A2D492F00D281A1 /* tictactoe */ = {
 			isa = PBXGroup;
 			children = (
+				951473C22A2D49D600D281A1 /* TicTacToeFeature.swift */,
+				951473B32A2D492F00D281A1 /* GameView.swift */,
 				951473B12A2D492F00D281A1 /* tictactoeApp.swift */,
-				951473B32A2D492F00D281A1 /* ContentView.swift */,
 				951473B52A2D493000D281A1 /* Assets.xcassets */,
 				951473B72A2D493000D281A1 /* Preview Content */,
 			);
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = tictactoe;
+			packageProductDependencies = (
+				951473C02A2D496A00D281A1 /* ComposableArchitecture */,
+			);
 			productName = tictactoe;
 			productReference = 951473AE2A2D492F00D281A1 /* tictactoe.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 951473A52A2D492F00D281A1;
+			packageReferences = (
+				951473BF2A2D496A00D281A1 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 951473AF2A2D492F00D281A1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				951473B42A2D492F00D281A1 /* ContentView.swift in Sources */,
+				951473C32A2D49D600D281A1 /* TicTacToeFeature.swift in Sources */,
+				951473B42A2D492F00D281A1 /* GameView.swift in Sources */,
 				951473B22A2D492F00D281A1 /* tictactoeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +351,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		951473BF2A2D496A00D281A1 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.54.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		951473C02A2D496A00D281A1 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 951473BF2A2D496A00D281A1 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 951473A62A2D492F00D281A1 /* Project object */;
 }
